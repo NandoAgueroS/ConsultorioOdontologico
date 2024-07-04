@@ -137,6 +137,26 @@ public class ControladoraPersistencia {
         return secretarioJPA.findSecretarioEntities();
     }
 
+    public Secretario traerSecretario(int id) {
+        return secretarioJPA.findSecretario(id);
+    }
+
+    public void editarSecretario(Secretario sec) {
+        try {
+            secretarioJPA.edit(sec);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void borrarSecretario(int id) {
+        try {
+            secretarioJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     
     
 }

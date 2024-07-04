@@ -182,4 +182,30 @@ public class Controladora {
     public List<Secretario> getSecretarios() {
         return controlPersis.getSecretarios();
     }
+
+    public Secretario traerSecretario(int id) {
+        return controlPersis.traerSecretario(id);
+    }
+
+    public void editarSecretario(Secretario sec, String dni, String nombre, String apellido, String telefono, String direccion, String fechaNac, String sector) {
+        sec.setDni(dni);
+        sec.setNombre(nombre);
+        sec.setApellido(apellido);
+        sec.setTelefono(telefono);
+        sec.setDireccion(direccion);
+        sec.setSector(sector);
+        
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date fechaSecretario = formato.parse(fechaNac);
+            sec.setFecha_nac(fechaSecretario);
+        } catch (ParseException ex) {
+            Logger.getLogger(Controladora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        controlPersis.editarSecretario(sec);
+    }
+
+    public void borrarSecretario(int id) {
+        controlPersis.borrarSecretario(id);
+    }
 }

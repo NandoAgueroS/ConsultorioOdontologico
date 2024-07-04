@@ -51,7 +51,7 @@ public class SvSecretarios extends HttpServlet {
         String sector = request.getParameter("sector_secretario");
         
         Usuario usu = control.crearUsuario(nombreUsu, contrasenia, rol);
-        control.crearSecretario(dni, nombre, apellido, telefono, direccion, fechaNac,sector, usu);
+        control.crearSecretario(dni, nombre, apellido, telefono, direccion, fechaNac,sector , usu);
         
         response.sendRedirect("index.jsp");
     }

@@ -65,7 +65,7 @@
                             <td><%=sec.getSector()%></td>
                             
                             <td style="display: flex; width: 230px;">
-                                <form name="eliminar" action="SvElimOdontologos" method="POST">
+                                <form name="eliminar" action="SvElimSecretarios" method="POST">
                                     <button type="submit" class="btn btn-primary btn-primary btn-user btn-block" 
                                             style="background-color: red; margin-right: 5px;">
                                         <i class="fas fa-trash-alt"></i> Eliminar 
@@ -73,7 +73,7 @@
                                     <input type="hidden" name="id" value="<%=sec.getId()%>">
                                 </form>
 
-                                <form name="editar" action="SvEditOdontologos" method="GET">
+                                <form name="editar" action="SvEditSecretarios" method="GET">
                                     <button type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;">
                                         <i class="fas fa-pencil-alt"></i> Editar
                                     </button>

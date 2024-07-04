@@ -19,7 +19,9 @@ C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\s
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Horario.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvUsuarios.java
+C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvElimSecretarios.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvEditSecretarios.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\OdontologoJpaController.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvEditPacientes.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Secretario.java
