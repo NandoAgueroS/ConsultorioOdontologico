@@ -67,8 +67,23 @@ public class Controladora {
         return controlPersis.getPacientes();
     }
 
-    public void borrarPaciente(int id) {
-        controlPersis.borrarPaciente(id);
+    public void borrarPaciente(int idPaciente) {
+        Paciente pacienConTurnos = controlPersis.traerPaciente(idPaciente);
+        Responsable responsable = pacienConTurnos.getUn_responsable();
+        
+        List<Turno> listaTurnos = new ArrayList<Turno>();
+        listaTurnos = pacienConTurnos.getLista_turnos();
+        for (Turno listaTurno : listaTurnos) {
+            controlPersis.borrarTurno(listaTurno.getId_turno());
+        }
+        
+        controlPersis.borrarPaciente(idPaciente);
+        
+        if (responsable!=null) {
+            System.out.println("no era null");
+            controlPersis.borrarResponsable(responsable.getId());
+        }
+        System.out.println("se elimino el paciente");
     }
 
     public Paciente traerPaciente(int id) {
@@ -117,8 +132,22 @@ public class Controladora {
         return controlPersis.getOdontologos();
     }
 
-    public void borrarOdontologo(int id) {
-        controlPersis.borrarOdontologo(id);
+    public void borrarOdontologo(int idOdontologo) {
+        Odontologo odontoConUsuario = controlPersis.traerOdontologo(idOdontologo);
+        int idUsuario = odontoConUsuario.getUn_usuario().getId_usuario();
+        int idHorario = odontoConUsuario.getUn_horario().getId_horario();
+        List<Turno> listaTurnos = new ArrayList<Turno>();
+        
+        listaTurnos = odontoConUsuario.getLista_turnos();
+        //borra todos los turnos asosciados al odontologo
+        for (Turno listaTurno : listaTurnos) {
+            controlPersis.borrarTurno(listaTurno.getId_turno());
+        }
+        controlPersis.borrarOdontologo(idOdontologo);
+        
+        controlPersis.borrarHorario(idHorario);
+        
+        controlPersis.borrarUsuario(idUsuario);
     }
 
     public Odontologo traerOdontologo(int id) {
@@ -205,8 +234,13 @@ public class Controladora {
         controlPersis.editarSecretario(sec);
     }
 
-    public void borrarSecretario(int id) {
-        controlPersis.borrarSecretario(id);
+    public void borrarSecretario(int idSecretario) {
+        Secretario secConUsuario = traerSecretario(idSecretario);
+        int idUsuario = secConUsuario.getUn_usuario().getId_usuario();
+        
+        controlPersis.borrarSecretario(idSecretario);
+        
+        controlPersis.borrarUsuario(idUsuario);
     }
 
     public Turno crearTurno(Odontologo odontoTurno, Paciente pacienTurno, String afeccionPaciente, String hora, String dia) {

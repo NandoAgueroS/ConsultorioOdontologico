@@ -162,6 +162,30 @@ public class ControladoraPersistencia {
         turnoJPA.create(turno);
     }
 
+    public void borrarTurno(int id_turno) {
+        try {
+            turnoJPA.destroy(id_turno);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void borrarResponsable(int id) {
+        try {
+            responsableJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void borrarHorario(int idHorario) {
+        try {
+            horarioJPA.destroy(idHorario);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     
     
 }
