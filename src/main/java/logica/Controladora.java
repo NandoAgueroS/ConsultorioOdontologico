@@ -208,4 +208,29 @@ public class Controladora {
     public void borrarSecretario(int id) {
         controlPersis.borrarSecretario(id);
     }
+
+    public Turno crearTurno(Odontologo odontoTurno, Paciente pacienTurno, String afeccionPaciente, String hora, String dia) {
+        Turno turno = new Turno();
+        turno.setOdonto(odontoTurno);
+        turno.setPacien(pacienTurno);
+        turno.setAfeccion(afeccionPaciente);
+        turno.setHora_turno(hora);
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        
+        try {
+            Date diaTurno = formato.parse(dia);
+            turno.setFecha_turno(diaTurno);
+        } catch (ParseException ex) {
+            Logger.getLogger(Controladora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        controlPersis.crearTurno(turno);
+        return turno;
+    }
+
+    public Odontologo editarTurnosOdontologo(Odontologo odontoTurno, Turno agregarTurno) {
+        odontoTurno.getLista_turnos().add(agregarTurno);
+        controlPersis.editarOdontologo(odontoTurno);
+        return odontoTurno;
+    }
 }

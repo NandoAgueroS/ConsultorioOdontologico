@@ -7,7 +7,9 @@ C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\s
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvLogin.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvOdontologos.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Turno.java
+C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvSelectOdontologo.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvElimOdontologos.java
+C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvTurnos.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Usuario.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\ResponsableJpaController.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Controladora.java
@@ -16,6 +18,7 @@ C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\s
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\UsuarioJpaController.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\PersonaJpaController.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvElimPacientes.java
+C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvSelectPaciente.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\logica\Horario.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\NandoJ\Documents\TodoCodeAcademy\NetBeans1917\ConsultorioOdontologico\src\main\java\servlets\SvUsuarios.java

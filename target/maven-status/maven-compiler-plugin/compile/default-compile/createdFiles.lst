@@ -3,6 +3,7 @@ servlets\SvEditSecretarios.class
 logica\Usuario.class
 servlets\SvElimPacientes.class
 servlets\SvEditUsuarios.class
+servlets\SvSelectPaciente.class
 logica\Persona.class
 logica\Secretario_.class
 logica\Turno.class
@@ -23,8 +24,10 @@ logica\Responsable_.class
 servlets\SvLogin.class
 persistencia\HorarioJpaController.class
 servlets\SvPacientes.class
+servlets\SvTurnos.class
 logica\Paciente.class
 servlets\SvSecretarios.class
+servlets\SvSelectOdontologo.class
 logica\Horario.class
 logica\Controladora.class
 logica\Usuario_.class
