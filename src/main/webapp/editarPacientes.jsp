@@ -10,7 +10,6 @@
 <% Paciente paci = (Paciente) request.getSession().getAttribute("paciEditar");
     SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
     String fechaPaciente = formato.format(paci.getFecha_nac());
-    String fechaResponsable = formato.format(paci.getUn_responsable().getFecha_nac());
 %>
 <form class="user" action="SvEditPacientes" method="POST">
     <div class="form-group col">
@@ -50,7 +49,8 @@
     </div>
     <!--datos del responsable en caso de que el paciente sea menor-->
     <p>Si el paciente es menor de edad, ingrese los datos del responsable</p>
-    <%if (paci.getUn_responsable()!= null) {%>
+    <%if (paci.getUn_responsable()!= null) {
+    String fechaResponsable = formato.format(paci.getUn_responsable().getFecha_nac());%>
     <div class="form-group col">
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user"

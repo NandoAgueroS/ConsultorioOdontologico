@@ -52,7 +52,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="SvTurnos">Ver Turnos</a>
+                        <a class="collapse-item" href="SvFiltrarOdontologo">Filtrar por Odontologo</a>
+                        <a class="collapse-item" href="SvVerElimTurnos">Ver Turnos</a>
                         <a class="collapse-item" href="SvSelectOdontologo">Alta Turnos</a>
                     </div>
                 </div>

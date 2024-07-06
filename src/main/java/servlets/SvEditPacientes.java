@@ -80,7 +80,8 @@ public class SvEditPacientes extends HttpServlet {
         String fechaNacResponsableString = request.getParameter("fecha_nac_responsable");
         String tipoResp = request.getParameter("tipo_resp");
 
-        if (paciente.getUn_responsable()==null) {
+        if (paciente.getUn_responsable()==null && nombreResponsable != null && apellidoResponsable !=null 
+                && fechaNacResponsableString != null && !fechaNacResponsableString.equals("")) {
             Responsable responsable = new Responsable();
             try {
                 Date fechaNacResponsable = (Date) formato.parse(fechaNacResponsableString);
@@ -97,7 +98,7 @@ public class SvEditPacientes extends HttpServlet {
             control.crearResponsable(responsable);
 
             paciente.setUn_responsable(responsable);
-        }else {
+        }else if (!fechaNacResponsableString.equals("")){
             try {
                 Date fechaNacResponsable = (Date) formato.parse(fechaNacResponsableString);
                 paciente.getUn_responsable().setFecha_nac(fechaNacResponsable);

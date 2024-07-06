@@ -267,4 +267,48 @@ public class Controladora {
         controlPersis.editarOdontologo(odontoTurno);
         return odontoTurno;
     }
+
+    public List<Turno> getTurnos() {
+        return controlPersis.getTurnos();
+    }
+
+    public void borrarTurno(int idTurno) {
+//        Odontologo odonto = turno.getOdonto();
+//        Paciente pacien = turno.getPacien();
+//        pacien.getLista_turnos().remove(turno);
+//        
+//        List<Turno> listaTurnosOdonto = new ArrayList<Turno>();
+//        listaTurnosOdonto = odonto.getLista_turnos();
+//        listaTurnosOdonto.remove(turno);
+//        
+//        List<Turno> listaTurnosPacien = new ArrayList<Turno>();
+//        listaTurnosPacien = pacien.getLista_turnos();
+//        listaTurnosPacien.remove(turno);
+//        
+//        odonto.setLista_turnos(listaTurnosOdonto);
+//        pacien.setLista_turnos(listaTurnosPacien);
+//        
+//        controlPersis.editarOdontologo(odonto);
+        
+//        Turno turno = controlPersis.traerTurno(idTurno);
+//        turno.getPacien().getLista_turnos().remove(turno);
+//        controlPersis.editarPaciente(turno.getPacien());
+        controlPersis.borrarTurno(idTurno);
+//        Odontologo odontoBD = controlPersis.traerOdontologo(turno.getOdonto().getId());
+//        Paciente pacienBD = controlPersis.traerPaciente(turno.getPacien().getId());
+        
+        //hacer prueba y borrar
+//        System.out.println("------traido de vuelta de BD");
+//        for (Turno turnoOdontoBD : odontoBD.getLista_turnos()) {
+//            System.out.println("turno odonto: "+turnoOdontoBD.getFecha_turno()+" "+turnoOdontoBD.getHora_turno());
+//        }
+//        System.out.println("");
+//        for (Turno turnoPacienBD : pacienBD.getLista_turnos()) {
+//            System.out.println("turno pacien: "+turnoPacienBD.getFecha_turno()+" "+turnoPacienBD.getHora_turno());
+//        }
+    }
+
+    public Turno traerTurno(int idTurno) {
+        return controlPersis.traerTurno(idTurno);
+    }
 }

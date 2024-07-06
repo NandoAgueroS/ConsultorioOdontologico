@@ -21,6 +21,7 @@ persistencia\SecretarioJpaController.class
 logica\Odontologo.class
 servlets\SvElimOdontologos.class
 logica\Responsable_.class
+servlets\SvFiltrarOdontologo.class
 servlets\SvLogin.class
 persistencia\HorarioJpaController.class
 servlets\SvPacientes.class
@@ -43,3 +44,4 @@ logica\Responsable.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\TurnoJpaController.class
 servlets\SvEditOdontologos.class
+servlets\SvVerElimTurnos.class

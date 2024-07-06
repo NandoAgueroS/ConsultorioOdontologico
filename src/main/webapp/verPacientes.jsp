@@ -5,6 +5,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file="components/header.jsp"%>
 <%@ include file="components/bodyPrimeraParte.jsp"%>
+<%  List<Paciente> listaPacientes = (List) request.getSession().getAttribute("listaPacientes");
+    SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+    int cantidadConObraSocial = 0;
+    int cantidadSinObraSocial = 0;
+    for (Paciente pacienteListado : listaPacientes) {
+        if (pacienteListado.isTiene_OS()) {
+            cantidadConObraSocial++;
+        } else {
+
+            cantidadSinObraSocial++;
+        }
+    }
+%>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -12,6 +25,9 @@
     <h1 class="h3 mb-2 text-gray-800">Ver Pacientes</h1>
     <p class="mb-4">Lista de pacientes:</p>
 
+            <h4 class="m-0 font-weight-bold text-primary">Con Obra Social: <%= cantidadConObraSocial%> <hr>
+                Sin Obra Social: <%= cantidadSinObraSocial%></h4>
+                <hr>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -50,13 +66,9 @@
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </tfoot>
-                    <%  List<Paciente> listaPacientes = (List) request.getSession().getAttribute("listaPacientes");
-                        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-                        
-                    %>
                     <tbody>
                         <%for (Paciente paci : listaPacientes) {
-                        String fechaPaciente = formato.format(paci.getFecha_nac());
+                                String fechaPaciente = formato.format(paci.getFecha_nac());
                         %>
                         <tr>
                             <td id="id_paci<%=paci.getId()%>"><%=paci.getId()%></td>
